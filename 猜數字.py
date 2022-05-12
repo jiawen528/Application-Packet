@@ -6,7 +6,7 @@
 
 import random
 
-answer = random.randint(1, 100)
+answer = random.randint(1, 100)    #使用random.randint()定義answer為1~100之隨機數字
 counter = 0
 while True:
     counter += 1
