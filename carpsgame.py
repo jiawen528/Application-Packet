@@ -4,7 +4,6 @@
 # In[ ]:
 
 
-
 """
 Craps賭博遊戲
 玩家搖兩骰子 如果第一次搖出7點或11點 玩家勝
@@ -20,23 +19,23 @@ Craps賭博遊戲
 
 """
 
-from random import randint
+from random import randint    #從隨機亂數模組(random)中匯入一個隨機整數(randint)
 start = True
 while start:
     money = 1000
     while money > 0:
         print('你的總資產為:',money)
         while True:
-            debt = int(input('請下注:'))
+            debt = int(input('請下注:'))    #自定義下注金額
             if 0 < debt <= money:
                 print('您的下注金額為:',debt)
                 break
             else:
                 print('您的下注金額不合理')
                 
-        craps1 = randint(1,6)
-        craps2 = randint(1,6)
-        first_play = craps1 + craps2
+        craps1 = randint(1,6)    #定義骰子1    
+        craps2 = randint(1,6)    #定義骰子2
+        first_play = craps1 + craps2    #點數需為兩骰子之和
         print('玩家搖出了%d點' %first_play)
             
         if first_play ==7 or first_play == 11:
